@@ -10,7 +10,7 @@
       color: #fff;
       text-align: center;
       padding: 60px 20px;
-      scroll-behavior: smooth; /* Smooth scroll */
+      scroll-behavior: smooth;
     }
 
     h1 {
@@ -25,6 +25,7 @@
       justify-content: center;
       gap: 40px;
       margin-top: 60px;
+      display: none; /* Hide sections by default */
     }
 
     .menu-item {
@@ -83,71 +84,80 @@
 
   <!-- Navigation Buttons -->
   <div class="nav-buttons">
-    <a href="#pizzas">Pizzas</a>
-    <a href="#sides">Sides</a>
-    <a href="#drinks">Drinks</a>
+    <a href="javascript:void(0);" onclick="showSection('pizzas')">Pizzas</a>
+    <a href="javascript:void(0);" onclick="showSection('sides')">Sides</a>
+    <a href="javascript:void(0);" onclick="showSection('drinks')">Drinks</a>
   </div>
 
   <!-- Pizzas Section -->
-  <section id="pizzas">
+  <section id="pizzas" class="menu-section">
     <h2>Pizzas</h2>
-    <div class="menu-section">
-      <div class="menu-item">
-        <img src="pizza1.jpg" alt="Margherita" />
-        <h3>Margherita</h3>
-        <p>$12.99</p>
-      </div>
+    <div class="menu-item">
+      <img src="pizza1.jpg" alt="Margherita" />
+      <h3>Margherita</h3>
+      <p>$12.99</p>
+    </div>
 
-      <div class="menu-item">
-        <img src="pizza2.jpg" alt="Pepperoni" />
-        <h3>Pepperoni</h3>
-        <p>$14.99</p>
-      </div>
+    <div class="menu-item">
+      <img src="pizza2.jpg" alt="Pepperoni" />
+      <h3>Pepperoni</h3>
+      <p>$14.99</p>
+    </div>
 
-      <div class="menu-item">
-        <img src="pizza3.jpg" alt="Veggie" />
-        <h3>Veggie</h3>
-        <p>$13.99</p>
-      </div>
+    <div class="menu-item">
+      <img src="pizza3.jpg" alt="Veggie" />
+      <h3>Veggie</h3>
+      <p>$13.99</p>
     </div>
   </section>
 
   <!-- Sides Section -->
-  <section id="sides">
+  <section id="sides" class="menu-section">
     <h2>Sides</h2>
-    <div class="menu-section">
-      <div class="menu-item">
-        <img src="side1.jpg" alt="Garlic Bread" />
-        <h3>Garlic Bread</h3>
-        <p>$5.99</p>
-      </div>
+    <div class="menu-item">
+      <img src="side1.jpg" alt="Garlic Bread" />
+      <h3>Garlic Bread</h3>
+      <p>$5.99</p>
+    </div>
 
-      <div class="menu-item">
-        <img src="side2.jpg" alt="Wings" />
-        <h3>Wings</h3>
-        <p>$7.99</p>
-      </div>
+    <div class="menu-item">
+      <img src="side2.jpg" alt="Wings" />
+      <h3>Wings</h3>
+      <p>$7.99</p>
     </div>
   </section>
 
   <!-- Drinks Section -->
-  <section id="drinks">
+  <section id="drinks" class="menu-section">
     <h2>Drinks</h2>
-    <div class="menu-section">
-      <div class="menu-item">
-        <img src="drink1.jpg" alt="Soda" />
-        <h3>Soda</h3>
-        <p>$2.99</p>
-      </div>
+    <div class="menu-item">
+      <img src="drink1.jpg" alt="Soda" />
+      <h3>Soda</h3>
+      <p>$2.99</p>
+    </div>
 
-      <div class="menu-item">
-        <img src="drink2.jpg" alt="Water" />
-        <h3>Water</h3>
-        <p>$1.99</p>
-      </div>
+    <div class="menu-item">
+      <img src="drink2.jpg" alt="Water" />
+      <h3>Water</h3>
+      <p>$1.99</p>
     </div>
   </section>
 
   <a class="back-home" href="index.html">Back to Home</a>
+
+  <!-- JavaScript to show sections -->
+  <script>
+    function showSection(sectionId) {
+      // Hide all sections
+      var sections = document.querySelectorAll('.menu-section');
+      sections.forEach(function(section) {
+        section.style.display = 'none';
+      });
+
+      // Show the selected section
+      var selectedSection = document.getElementById(sectionId);
+      selectedSection.style.display = 'flex'; // Show it as flex for layout
+    }
+  </script>
 </body>
 </html>
