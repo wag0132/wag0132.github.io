@@ -93,12 +93,14 @@
       flex-direction: column;
       align-items: center;
       margin-top: 20px;
+      padding-bottom: 20px;
     }
 
     .menu-item {
       max-width: 300px;
       text-align: center;
       margin: 10px;
+      display: none; /* Hide text by default */
     }
 
     .menu-item img {
@@ -126,6 +128,28 @@
 
     .back-home:hover {
       background-color: #ff5722;
+    }
+
+    /* Style for the active state (hamburger) */
+    .active .hamburger {
+      transform: rotate(90deg);
+    }
+
+    .active .hamburger::before {
+      transform: translateY(10px) rotate(45deg);
+    }
+
+    .active .hamburger::after {
+      transform: translateY(-10px) rotate(-45deg);
+    }
+
+    /* Display text when the section is expanded */
+    .active-section .menu-item {
+      display: block;
+    }
+
+    .active-section {
+      display: flex;
     }
   </style>
 </head>
@@ -212,19 +236,25 @@
   <!-- JavaScript to show sections -->
   <script>
     function toggleMenu(sectionId) {
-      // Hide all sections
+      // Toggle the active state for sections
       var sections = document.querySelectorAll('.menu-section');
       sections.forEach(function(section) {
-        section.style.display = 'none';
+        section.classList.remove('active-section');
       });
 
       // Show the selected section
       var selectedSection = document.getElementById(sectionId);
-      selectedSection.style.display = 'flex';
+      selectedSection.classList.add('active-section');
 
       // Toggle hamburger icon animation
       var hamburger = event.currentTarget.querySelector('.hamburger');
       hamburger.classList.toggle('active');
+
+      // Toggle the menu items visibility
+      var menuItems = selectedSection.querySelectorAll('.menu-item');
+      menuItems.forEach(function(item) {
+        item.style.display = item.style.display === 'block' ? 'none' : 'block';
+      });
     }
   </script>
 </body>
