@@ -2,75 +2,81 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title></title>
+    <title>Benvenuti Pizzeria</title>
     <style>
-      <style>
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #111;
-    color: #fff;
-    text-align: center;
-    padding: 100px 20px;
-  }
-  h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
-    color: #ff4500;
-  }
-  p {
-    font-size: 20px;
-    color: #ccc;
-  }
-  /* Tamanho do logotipo aumentado */
-  img.logo {
-    width: 100px;  /* Ajuste do tamanho aqui */
-    margin-bottom: 20px;
-  }
-  .btn-order {
-    background-color: #ff4500;
-    color: white;
-    padding: 15px 30px;
-    font-size: 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 30px;
-  }
-  .btn-order:hover {
-    background-color: #ff5722;
-  }
-</style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #111;
+        color: #fff;
+        text-align: center;
+        padding: 100px 20px;
+      }
 
+      p {
+        font-size: 20px;
+        color: #ccc;
+      }
+
+      img.logo {
+        width: 400px; /* Larger logo */
+        margin-bottom: 20px;
+      }
+
+      .button-container {
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+
+      .btn {
+        background-color: #ff4500;
+        color: white;
+        padding: 15px 30px;
+        font-size: 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+
+      .btn:hover {
+        background-color: #ff5722;
       }
     </style>
   </head>
+
   <body>
-    <!-- Logotipo -->
-    <img src="logo sign.jpeg" alt="Benvenuti Pizzeria Logo" />
+    <!-- Logo -->
+    <img src="logo sign.jpeg" alt="Benvenuti Pizzeria Logo" class="logo" />
 
-    <!-- Título -->
-
-    <!-- Texto -->
+    <!-- Message -->
     <p>Our website is under construction.<br> Soon you'll be able to order your favorite pizza right here 🍕</p>
 
-    <!-- Botão Order Now -->
-    <a href="https://order.toasttab.com/online/benvenuti-pizza-co-155-highland-avenue" class="btn-order">Order Now</a>
-  </body>
-</html><h2>Our Pizzas</h2>
-<div style="display: flex; justify-content: center; gap: 20px;">
-  <div>
-    <img src="pizza1.jpg" alt="Pizza 1" width="200" />
-    <p>Margherita</p>
-    <p>$12.99</p>
-  </div>
-  <div>
-    <img src="pizza2.jpg" alt="Pizza 2" width="200" />
-    <p>Pepperoni</p>
-    <p>$14.99</p>
-  </div>
-  <div>
-    <img src="pizza3.jpg" alt="Pizza 3" width="200" />
-    <p>Veggie</p>
-    <p>$13.99</p>
-  </div>
-</div>
+    <!-- Buttons -->
+    <div class="button-container">
+      <a href="https://order.toasttab.com/online/benvenuti-pizza-co-155-highland-avenue" class="btn">Order Now</a>
+      <a href="#menu" class="btn">Explore</a>
+    </div>
 
+    <!-- Pizza Menu -->
+    <h2 id="menu" style="color: #ff4500; margin-top: 60px;">Our Pizzas</h2>
+    <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 20px;">
+      <div>
+        <img src="pizza1.jpg" alt="Pizza 1" width="200" />
+        <p>Margherita</p>
+        <p>$12.99</p>
+      </div>
+      <div>
+        <img src="pizza2.jpg" alt="Pizza 2" width="200" />
+        <p>Pepperoni</p>
+        <p>$14.99</p>
+      </div>
+      <div>
+        <img src="pizza3.jpg" alt="Pizza 3" width="200" />
+        <p>Veggie</p>
+        <p>$13.99</p>
+      </div>
+    </div>
+  </body>
+</html>
