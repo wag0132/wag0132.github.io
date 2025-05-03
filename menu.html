@@ -19,18 +19,80 @@
       margin-bottom: 40px;
     }
 
-    .menu-section {
+    .nav-buttons {
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
-      gap: 40px;
-      margin-top: 60px;
-      display: none; /* Hide sections by default */
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+
+    .menu-button {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      background-color: #222;
+      border-radius: 10px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .menu-button img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .menu-button h3 {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      color: #fff;
+      font-size: 24px;
+      margin: 0;
+    }
+
+    .menu-button .hamburger {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 30px;
+      height: 3px;
+      background-color: #fff;
+      transform-origin: center;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .menu-button .hamburger::before,
+    .menu-button .hamburger::after {
+      content: "";
+      position: absolute;
+      width: 30px;
+      height: 3px;
+      background-color: #fff;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .menu-button .hamburger::before {
+      top: -10px;
+    }
+
+    .menu-button .hamburger::after {
+      bottom: -10px;
+    }
+
+    /* Hide content by default */
+    .menu-section {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 20px;
     }
 
     .menu-item {
       max-width: 300px;
       text-align: center;
+      margin: 10px;
     }
 
     .menu-item img {
@@ -40,28 +102,10 @@
 
     .menu-item h3 {
       margin: 15px 0 5px;
-      color: #fff;
     }
 
     .menu-item p {
       color: #ccc;
-    }
-
-    .nav-buttons {
-      margin-bottom: 40px;
-    }
-
-    .nav-buttons a {
-      background-color: #ff4500;
-      color: white;
-      padding: 12px 25px;
-      text-decoration: none;
-      border-radius: 5px;
-      margin: 10px;
-    }
-
-    .nav-buttons a:hover {
-      background-color: #ff5722;
     }
 
     .back-home {
@@ -84,9 +128,23 @@
 
   <!-- Navigation Buttons -->
   <div class="nav-buttons">
-    <a href="javascript:void(0);" onclick="showSection('pizzas')">Pizzas</a>
-    <a href="javascript:void(0);" onclick="showSection('sides')">Sides</a>
-    <a href="javascript:void(0);" onclick="showSection('drinks')">Drinks</a>
+    <div class="menu-button" onclick="toggleMenu('pizzas')">
+      <img src="pizza_button.jpg" alt="Pizza" />
+      <h3>Pizza</h3>
+      <div class="hamburger"></div>
+    </div>
+
+    <div class="menu-button" onclick="toggleMenu('sides')">
+      <img src="sides_button.jpg" alt="Sides" />
+      <h3>Sides</h3>
+      <div class="hamburger"></div>
+    </div>
+
+    <div class="menu-button" onclick="toggleMenu('drinks')">
+      <img src="drinks_button.jpg" alt="Drinks" />
+      <h3>Drinks</h3>
+      <div class="hamburger"></div>
+    </div>
   </div>
 
   <!-- Pizzas Section -->
@@ -147,7 +205,7 @@
 
   <!-- JavaScript to show sections -->
   <script>
-    function showSection(sectionId) {
+    function toggleMenu(sectionId) {
       // Hide all sections
       var sections = document.querySelectorAll('.menu-section');
       sections.forEach(function(section) {
@@ -156,7 +214,11 @@
 
       // Show the selected section
       var selectedSection = document.getElementById(sectionId);
-      selectedSection.style.display = 'flex'; // Show it as flex for layout
+      selectedSection.style.display = 'flex';
+
+      // Toggle hamburger icon animation
+      var hamburger = event.currentTarget.querySelector('.hamburger');
+      hamburger.classList.toggle('active');
     }
   </script>
 </body>
