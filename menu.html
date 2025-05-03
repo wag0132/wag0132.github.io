@@ -1,80 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Explore Menu – Benvenuti Pizzeria</title>
+  <meta charset="UTF-8">
+  <title>Benvenuti Pizzeria Menu</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
       background-color: #111;
       color: #fff;
-      margin: 0;
+      font-family: Arial, sans-serif;
       padding: 40px;
     }
 
-    h1 {
-      text-align: center;
-      color: #ff4500;
-      font-size: 48px;
-      margin-bottom: 40px;
-    }
-
-    .menu-container {
+    .menu-section {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      gap: 30px;
+      gap: 40px;
     }
 
     .menu-card {
-      position: relative;
       width: 300px;
+      position: relative;
     }
 
-    .menu-card img {
+    .image-wrapper {
+      position: relative;
+    }
+
+    .image-wrapper img {
       width: 100%;
       border-radius: 10px;
+      display: block;
     }
 
     .menu-card h3 {
-      position: absolute;
-      bottom: 10px;
-      left: 15px;
+      margin: 10px 0 5px;
       font-size: 24px;
-      margin: 0;
       color: #fff;
-      text-shadow: 1px 1px #000;
+      text-align: center;
     }
 
     .hamburger {
       position: absolute;
       top: 10px;
-      right: 15px;
+      right: 10px;
+      width: 25px;
       cursor: pointer;
     }
 
     .hamburger div {
-      width: 25px;
+      background: white;
       height: 3px;
-      background-color: white;
-      margin: 4px 0;
-      transition: 0.3s;
+      margin: 5px 0;
+      width: 100%;
     }
 
     .menu-details {
       display: none;
       background-color: #222;
-      border-radius: 0 0 10px 10px;
       padding: 15px;
-      margin-top: -10px;
-    }
-
-    .menu-details.show {
-      display: block;
+      border-radius: 10px;
+      margin-top: 10px;
     }
 
     .menu-item {
-      margin-bottom: 10px;
+      margin-bottom: 15px;
     }
 
     .menu-item img {
@@ -82,52 +72,48 @@
       border-radius: 5px;
     }
 
-    .menu-item h4 {
-      margin: 10px 0 5px;
-    }
-
-    .menu-item p {
-      color: #ccc;
-      margin: 0;
+    .menu-item h4, .menu-item p {
+      margin: 5px 0;
+      text-align: center;
     }
   </style>
 </head>
 <body>
 
-  <h1>Explore Our Menu</h1>
+  <div class="menu-section">
 
-  <div class="menu-container">
-
-   <!-- Pizza Section -->
-<div class="menu-card">
-  <div class="image-wrapper">
-    <img src="pizza peperoni logobeta.jpeg" alt="Pizza">
-    <div class="hamburger" onclick="toggleDetails('pizza-details')">
-      <div></div><div></div><div></div>
-    </div>
-  </div>
-  <h3>Pizza</h3>
-  <div id="pizza-details" class="menu-details">
-    <div class="menu-item">
-      <img src="pizza1.jpg" alt="Margherita">
-      <h4>Margherita</h4>
-      <p>$12.99</p>
-    </div>
-    <div class="menu-item">
-      <img src="pizza2.jpg" alt="Pepperoni">
-      <h4>Pepperoni</h4>
-      <p>$14.99</p>
-    </div>
-  </div>
-</div>
-
-    <!-- Sides Section -->
+    <!-- Pizza -->
     <div class="menu-card">
-      <img src="sides_button.jpg" alt="Sides">
-      <h3>Sides</h3>
-      <div class="hamburger" onclick="toggleDetails('sides-details')">
-        <div></div><div></div><div></div>
+      <div class="image-wrapper">
+        <img src="pizza peperoni logobeta.jpeg" alt="Pizza">
+        <div class="hamburger" onclick="toggleDetails('pizza-details')">
+          <div></div><div></div><div></div>
+        </div>
       </div>
+      <h3>Pizza</h3>
+      <div id="pizza-details" class="menu-details">
+        <div class="menu-item">
+          <img src="pizza1.jpg" alt="Margherita">
+          <h4>Margherita</h4>
+          <p>$12.99</p>
+        </div>
+        <div class="menu-item">
+          <img src="pizza2.jpg" alt="Pepperoni">
+          <h4>Pepperoni</h4>
+          <p>$14.99</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sides -->
+    <div class="menu-card">
+      <div class="image-wrapper">
+        <img src="sides_button.jpg" alt="Sides">
+        <div class="hamburger" onclick="toggleDetails('sides-details')">
+          <div></div><div></div><div></div>
+        </div>
+      </div>
+      <h3>Sides</h3>
       <div id="sides-details" class="menu-details">
         <div class="menu-item">
           <img src="side1.jpg" alt="Garlic Bread">
@@ -142,13 +128,15 @@
       </div>
     </div>
 
-    <!-- Drinks Section -->
+    <!-- Drinks -->
     <div class="menu-card">
-      <img src="drinks_button.jpg" alt="Drinks">
-      <h3>Drinks</h3>
-      <div class="hamburger" onclick="toggleDetails('drinks-details')">
-        <div></div><div></div><div></div>
+      <div class="image-wrapper">
+        <img src="drinks_button.jpg" alt="Drinks">
+        <div class="hamburger" onclick="toggleDetails('drinks-details')">
+          <div></div><div></div><div></div>
+        </div>
       </div>
+      <h3>Drinks</h3>
       <div id="drinks-details" class="menu-details">
         <div class="menu-item">
           <img src="drink1.jpg" alt="Soda">
@@ -167,9 +155,10 @@
 
   <script>
     function toggleDetails(id) {
-      const section = document.getElementById(id);
-      section.classList.toggle('show');
+      const el = document.getElementById(id);
+      el.style.display = (el.style.display === "block") ? "none" : "block";
     }
   </script>
+
 </body>
 </html>
