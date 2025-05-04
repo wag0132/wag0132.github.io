@@ -14,7 +14,6 @@
         position: relative;
       }
 
-      /* Logo pequena no canto superior esquerdo */
       .small-logo {
         position: absolute;
         top: 20px;
@@ -45,38 +44,33 @@
       }
 
       .btn {
-        background-color: #ff0000; /* Vermelho puro */
+        background-color: #d10000; /* Vermelho vinho - ajuste aqui! */
         color: white;
         padding: 15px 30px;
         font-size: 20px;
         text-decoration: none;
         border-radius: 5px;
         transition: all 0.3s ease;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        border: none; /* Remove borda padrão em alguns navegadores */
       }
 
       .btn:hover {
-        background-color: #cc0000; /* Vermelho mais escuro no hover */
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra maior no hover */
+        background-color: #a80000; /* Vermelho mais escuro no hover */
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
       }
 
       .btn:active {
-        transform: scale(0.98); /* Efeito de clique */
+        transform: scale(0.98);
+        background-color: #8b0000; /* Efeito de clique mais escuro */
       }
     </style>
   </head>
 
   <body>
-    <!-- Logo pequena no canto -->
     <img src="LOGO PNG.png" alt="Mini Logo" class="small-logo" />
-
-    <!-- Logo central grande -->
     <img src="Benvenuti_fachada_ sem fundo.png" alt="Benvenuti Pizzeria Logo" class="logo" />
-
-    <!-- Mensagem -->
     <p>Our website is under construction.<br> Soon you'll be able to order your favorite pizza right here 🍕</p>
-
-    <!-- Botões -->
     <div class="button-container">
       <a href="https://order.toasttab.com/online/benvenuti-pizza-co-155-highland-avenue" class="btn">Order Now</a>
       <a href="menu.html" class="btn">Explore</a>
