@@ -1,17 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <title>Benvenuti Pizzeria</title>
     <style>
       body {
         font-family: Arial, sans-serif;
-        background-color: #ffffff;
-        color: #000;
+        margin: 0;
+        padding: 0;
+        color: white;
         text-align: center;
-        padding: 100px 20px;
-        overflow-x: hidden;
+        background-image: url('FOTO parade frente (1).jpeg');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
         position: relative;
+        min-height: 100vh;
+      }
+
+      /* Overlay escuro para melhorar legibilidade */
+      body::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Ajuste a opacidade aqui (0.5 = 50%) */
+        z-index: -1;
       }
 
       .small-logo {
@@ -20,19 +36,21 @@
         left: 20px;
         width: 80px;
         height: auto;
+        z-index: 1;
       }
 
       p {
         font-size: 20px;
-        color: #333;
+        color: white;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8); /* Sombra no texto para contraste */
       }
 
       img.logo {
         width: 1000px;
-        margin-bottom: 20px;
+        max-width: 90%;
+        margin: 20px auto;
         display: block;
-        margin-left: auto;
-        margin-right: auto;
+        z-index: 1;
       }
 
       .button-container {
@@ -41,39 +59,56 @@
         justify-content: center;
         gap: 20px;
         flex-wrap: wrap;
+        z-index: 1;
       }
 
       .btn {
-        background-color: #d10000; /* Vermelho vinho - ajuste aqui! */
+        background-color: #d10000;
         color: white;
         padding: 15px 30px;
         font-size: 20px;
         text-decoration: none;
         border-radius: 5px;
         transition: all 0.3s ease;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        border: none; /* Remove borda padrão em alguns navegadores */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        border: none;
       }
 
       .btn:hover {
-        background-color: #a80000; /* Vermelho mais escuro no hover */
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        background-color: #a80000;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
       }
 
       .btn:active {
         transform: scale(0.98);
-        background-color: #8b0000; /* Efeito de clique mais escuro */
+      }
+
+      /* Container principal para centralizar conteúdo */
+      .main-content {
+        position: relative;
+        padding: 100px 20px;
+        z-index: 1;
       }
     </style>
   </head>
 
   <body>
+    <!-- Logo pequena no canto -->
     <img src="LOGO PNG.png" alt="Mini Logo" class="small-logo" />
-    <img src="Benvenuti_fachada_ sem fundo.png" alt="Benvenuti Pizzeria Logo" class="logo" />
-    <p>Our website is under construction.<br> Soon you'll be able to order your favorite pizza right here 🍕</p>
-    <div class="button-container">
-      <a href="https://order.toasttab.com/online/benvenuti-pizza-co-155-highland-avenue" class="btn">Order Now</a>
-      <a href="menu.html" class="btn">Explore</a>
+
+    <!-- Conteúdo principal -->
+    <div class="main-content">
+      <!-- Logo central grande -->
+      <img src="Benvenuti_fachada_ sem fundo.png" alt="Benvenuti Pizzeria Logo" class="logo" />
+
+      <!-- Mensagem -->
+      <p>Nosso site está em construção.<br> Em breve você poderá pedir sua pizza favorita aqui mesmo 🍕</p>
+
+      <!-- Botões -->
+      <div class="button-container">
+        <a href="https://order.toasttab.com/online/benvenuti-pizza-co-155-highland-avenue" class="btn">Peça Agora</a>
+        <a href="menu.html" class="btn">Cardápio</a>
+      </div>
     </div>
   </body>
 </html>
