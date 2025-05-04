@@ -6,11 +6,21 @@
     <style>
       body {
         font-family: Arial, sans-serif;
-        background-color: #ffffff; /* cor do fundo da logo */
+        background-color: #ffffff;
         color: #000;
         text-align: center;
         padding: 100px 20px;
         overflow-x: hidden;
+        position: relative;
+      }
+
+      /* Logo pequena no canto superior esquerdo */
+      .small-logo {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        width: 80px;
+        height: auto;
       }
 
       p {
@@ -51,14 +61,16 @@
   </head>
 
   <body>
-    <!-- Logo -->
-    <img src="Benvenuti_fachada_ sem fundo.png" alt="Benvenuti_fachada_ sem fundo.png
-" class="logo" />
+    <!-- Logo pequena no canto -->
+    <img src="LOGO PNG.png" alt="Mini Logo" class="small-logo" />
 
-    <!-- Message -->
+    <!-- Logo central grande -->
+    <img src="logo_sign_cropped.png" alt="Benvenuti Pizzeria Logo" class="logo" />
+
+    <!-- Mensagem -->
     <p>Our website is under construction.<br> Soon you'll be able to order your favorite pizza right here 🍕</p>
 
-    <!-- Buttons -->
+    <!-- Botões -->
     <div class="button-container">
       <a href="https://order.toasttab.com/online/benvenuti-pizza-co-155-highland-avenue" class="btn">Order Now</a>
       <a href="menu.html" class="btn">Explore</a>
