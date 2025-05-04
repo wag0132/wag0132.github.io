@@ -1,114 +1,104 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Benvenuti Pizzeria</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        color: white;
-        text-align: center;
-        background-image:url('imagens/FOTO parade frente (1).jpeg');
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
-        position: relative;
-        min-height: 100vh;
-      }
+<head>
+  <meta charset="UTF-8">
+  <title>Benvenuti Pizzeria</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: white;
+      text-align: center;
+      /* IMAGEM DE FUNDO DIRETO DO GITHUB (URL RAW) */
+      background-image: url('https://raw.githubusercontent.com/wag0132/wag0132.github.io/main/FOTO-parade-frente-1.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      min-height: 100vh;
+      position: relative;
+    }
 
-      /* Overlay escuro para melhorar legibilidade */
-      body::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5); /* Ajuste a opacidade aqui (0.5 = 50%) */
-        z-index: -1;
-      }
+    /* Overlay preto para melhorar contraste */
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: -1;
+    }
 
-      .small-logo {
-        position: absolute;
-        top: 20px;
-        left: 20px;
-        width: 80px;
-        height: auto;
-        z-index: 1;
-      }
+    .small-logo {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      width: 80px;
+      height: auto;
+      z-index: 1;
+    }
 
-      p {
-        font-size: 20px;
-        color: white;
-        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8); /* Sombra no texto para contraste */
-      }
+    .main-content {
+      position: relative;
+      padding: 100px 20px;
+      z-index: 1;
+    }
 
-      img.logo {
-        width: 1000px;
-        max-width: 90%;
-        margin: 20px auto;
-        display: block;
-        z-index: 1;
-      }
+    img.logo {
+      width: 1000px;
+      max-width: 90%;
+      margin: 0 auto 20px;
+      display: block;
+    }
 
-      .button-container {
-        margin-top: 40px;
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-        flex-wrap: wrap;
-        z-index: 1;
-      }
+    p {
+      font-size: 20px;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    }
 
-      .btn {
-        background-color: #d10000;
-        color: white;
-        padding: 15px 30px;
-        font-size: 20px;
-        text-decoration: none;
-        border-radius: 5px;
-        transition: all 0.3s ease;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-        border: none;
-      }
+    .button-container {
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
 
-      .btn:hover {
-        background-color: #a80000;
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
-      }
+    .btn {
+      background-color: #d10000;
+      color: white;
+      padding: 15px 30px;
+      font-size: 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: all 0.3s;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      border: none;
+    }
 
-      .btn:active {
-        transform: scale(0.98);
-      }
+    .btn:hover {
+      background-color: #a80000;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    }
 
-      /* Container principal para centralizar conteúdo */
-      .main-content {
-        position: relative;
-        padding: 100px 20px;
-        z-index: 1;
-      }
-    </style>
-  </head>
-
-  <body>
-    <!-- Logo pequena no canto -->
-    <img src="LOGO PNG.png" alt="Mini Logo" class="small-logo" />
-
-    <!-- Conteúdo principal -->
-    <div class="main-content">
-      <!-- Logo central grande -->
-      <img src="Benvenuti_fachada_ sem fundo.png" alt="Benvenuti Pizzeria Logo" class="logo" />
-
-      <!-- Mensagem -->
-      <p>Nosso site está em construção.<br> Em breve você poderá pedir sua pizza favorita aqui mesmo 🍕</p>
-
-      <!-- Botões -->
-      <div class="button-container">
-        <a href="https://order.toasttab.com/online/benvenuti-pizza-co-155-highland-avenue" class="btn">Peça Agora</a>
-        <a href="menu.html" class="btn">Cardápio</a>
-      </div>
+    .btn:active {
+      transform: scale(0.98);
+    }
+  </style>
+</head>
+<body>
+  <img src="LOGO-PNG.png" alt="Logo Benvenuti" class="small-logo">
+  
+  <div class="main-content">
+    <img src="Benvenuti_fachada-sem-fundo.png" alt="Benvenuti Pizzeria" class="logo">
+    <p>Nosso site está em construção.<br>Em breve você poderá pedir sua pizza favorita aqui mesmo 🍕</p>
+    
+    <div class="button-container">
+      <a href="https://order.toasttab.com/online/benvenuti-pizza-co-155-highland-avenue" class="btn">Peça Agora</a>
+      <a href="menu.html" class="btn">Cardápio</a>
     </div>
-  </body>
+  </div>
+</body>
 </html>
