@@ -1,108 +1,79 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <title>Benvenuti Pizzeria</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      color: white;
-      text-align: center;
-      /* Imagem de fundo - substitua pela sua URL */
-      background-image: url(https://github.com/wag0132/wag0132.github.io/blob/main/FOTO%20parade%20frente%20%20(1).jpeg);
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
-      min-height: 100vh;
-      position: relative;
-    }
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Benvenuti Pizzeria</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #ffffff;
+        color: #000;
+        text-align: center;
+        padding: 100px 20px;
+        overflow-x: hidden;
+        position: relative;
+      }
 
-    /* Overlay para melhorar legibilidade */
-    body::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-      z-index: -1;
-    }
+      .small-logo {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        width: 80px;
+        height: auto;
+      }
 
-    .small-logo {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      width: 80px;
-      height: auto;
-      z-index: 1;
-    }
+      p {
+        font-size: 20px;
+        color: #333;
+      }
 
-    .main-content {
-      position: relative;
-      padding: 100px 20px;
-      z-index: 1;
-    }
+      img.logo {
+        width: 1000px;
+        margin-bottom: 20px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
 
-    img.logo {
-      width: 1000px;
-      max-width: 90%;
-      margin: 0 auto 20px;
-      display: block;
-    }
+      .button-container {
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
 
-    p {
-      font-size: 20px;
-      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
-      margin-bottom: 30px;
-    }
+      .btn {
+        background-color: #d10000; /* Vermelho vinho - ajuste aqui! */
+        color: white;
+        padding: 15px 30px;
+        font-size: 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        border: none; /* Remove borda padrão em alguns navegadores */
+      }
 
-    .button-container {
-      margin-top: 40px;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
+      .btn:hover {
+        background-color: #a80000; /* Vermelho mais escuro no hover */
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+      }
 
-    .btn {
-      background-color: #d10000;
-      color: white;
-      padding: 15px 30px;
-      font-size: 20px;
-      text-decoration: none;
-      border-radius: 5px;
-      transition: all 0.3s;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-      border: none;
-    }
+      .btn:active {
+        transform: scale(0.98);
+        background-color: #8b0000; /* Efeito de clique mais escuro */
+      }
+    </style>
+  </head>
 
-    .btn:hover {
-      background-color: #a80000;
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
-    }
-
-    .btn:active {
-      transform: scale(0.98);
-    }
-  </style>
-</head>
-<body>
-  <!-- Logo pequena - substitua pelo caminho correto -->
-  <img src="LOGO PNG.png" alt="Logo Benvenuti" class="small-logo">
-  
-  <div class="main-content">
-    <!-- Logo central - substitua pelo caminho correto -->
-    <img src="Benvenuti_fachada_ sem fundo.png" alt="Benvenuti Pizzeria" class="logo">
-    
-    <p>Nosso site está em construção.<br>Em breve você poderá pedir sua pizza favorita aqui mesmo 🍕</p>
-    
+  <body>
+    <img src="LOGO PNG.png" alt="Mini Logo" class="small-logo" />
+    <img src="Benvenuti_fachada_ sem fundo.png" alt="Benvenuti Pizzeria Logo" class="logo" />
+    <p>Our website is under construction.<br> Soon you'll be able to order your favorite pizza right here 🍕</p>
     <div class="button-container">
-      <a href="https://order.toasttab.com/online/benvenuti-pizza-co-155-highland-avenue" class="btn">Peça Agora</a>
-      <a href="menu.html" class="btn">Cardápio</a>
+      <a href="https://order.toasttab.com/online/benvenuti-pizza-co-155-highland-avenue" class="btn">Order Now</a>
+      <a href="menu.html" class="btn">Explore</a>
     </div>
-  </div>
-</body>
+  </body>
 </html>
