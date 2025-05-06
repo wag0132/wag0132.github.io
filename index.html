@@ -14,15 +14,14 @@
       }
 
       body {
-  background-color: #ffffff; /* Fundo branco puro */
-  border: 25px solid #d9d9d9;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 40px;
-}
-
+        background-color: #ffffff; /* fundo branco */
+        border: 25px solid #d9d9d9; /* borda ao redor da página */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 40px;
+      }
 
       .content {
         max-width: 1000px;
@@ -32,58 +31,36 @@
       }
 
       .small-logo {
-  position: absolute;
-  top: 20px;
-  left: 40px; /* movido mais para a direita */
-  width: 80px;
-  height: auto;
-  z-index: 2;
-}
+        position: absolute;
+        top: 20px;
+        left: 40px; /* movida mais pra direita */
+        width: 80px;
+        height: auto;
+        z-index: 2;
+      }
 
-@media (max-width: 768px) {
-  body {
-    padding: 20px;
-    border-width: 15px;
-  }
+      p {
+        font-size: 20px;
+        color: #333;
+        margin: 20px 0;
+      }
 
-  .small-logo {
-    width: 50px; /* menor em tablets/celulares */
-    top: 15px;
-    left: 25px;
-  }
+      img.logo {
+        width: 100%;
+        max-width: 1000px;
+        max-height: 250px; /* limita altura da logo */
+        object-fit: contain; /* evita distorção */
+        margin: 0 auto 20px;
+        display: block;
+      }
 
-  p {
-    font-size: 20px; /* texto um pouco maior no mobile */
-  }
-
-  .btn {
-    font-size: 18px;
-    padding: 12px 24px;
-  }
-}
-
-@media (max-width: 480px) {
-  .small-logo {
-    width: 40px; /* ainda menor em celulares pequenos */
-    top: 10px;
-    left: 20px;
-  }
-
-  p {
-    font-size: 22px; /* ainda mais visível no celular */
-  }
-
-  .btn {
-    width: 100%;
-    max-width: 300px;
-  }
-
-  .button-container {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
+      .button-container {
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
 
       .btn {
         background-color: #d10000;
@@ -106,6 +83,50 @@
         transform: scale(0.98);
         background-color: #8b0000;
       }
+
+      @media (max-width: 768px) {
+        body {
+          padding: 20px;
+          border-width: 15px;
+        }
+
+        .small-logo {
+          width: 50px;
+          top: 15px;
+          left: 25px;
+        }
+
+        p {
+          font-size: 20px;
+        }
+
+        .btn {
+          font-size: 18px;
+          padding: 12px 24px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .small-logo {
+          width: 40px;
+          top: 10px;
+          left: 20px;
+        }
+
+        p {
+          font-size: 22px;
+        }
+
+        .btn {
+          width: 100%;
+          max-width: 300px;
+        }
+
+        .button-container {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
     </style>
   </head>
 
@@ -121,12 +142,4 @@
       </div>
     </div>
   </body>
-</html>img.logo {
-  width: 100%;
-  max-width: 1000px;
-  max-height: 250px;      /* limita a altura da logo */
-  object-fit: contain;    /* garante que ela se encaixe sem distorcer */
-  margin: 0 auto 20px;
-  display: block;
-}
-
+</html>
