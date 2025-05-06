@@ -19,7 +19,7 @@
       justify-content: center;
       align-items: flex-start;
       text-align: center;
-      padding: 90px 40px 40px; /* top padding ajustado por causa da barra fixa */
+      padding: 90px 40px 40px;
       flex-direction: column;
       min-height: 100vh;
     }
@@ -115,8 +115,17 @@
       background-color: #8b0000;
     }
 
-    .info-section {
+    .info-columns {
+      display: flex;
+      gap: 40px;
       margin-top: 50px;
+      flex-wrap: wrap;
+    }
+
+    .info-columns .info-section {
+      flex: 1;
+      min-width: 280px;
+      text-align: left;
     }
 
     .info-section h3 {
@@ -131,7 +140,7 @@
     }
 
     form {
-      margin-top: 40px;
+      margin-top: 20px;
       text-align: left;
     }
 
@@ -161,7 +170,7 @@
 
     @media (max-width: 768px) {
       body {
-        padding: 90px 20px 20px; /* padding top ajustado para mobile */
+        padding: 90px 20px 20px;
         border-width: 15px;
       }
 
@@ -211,12 +220,16 @@
         flex-direction: column;
         align-items: center;
       }
+
+      .info-columns {
+        flex-direction: column;
+      }
     }
   </style>
 </head>
 
 <body>
-  <!-- Contact bar no topo fixo -->
+  <!-- Barra de contato fixa no topo -->
   <div class="contact-bar">
     📞 (203) 274-8886 &nbsp;&nbsp;|&nbsp;&nbsp;
     📸 <a href="https://instagram.com/benvenutipizza_co" target="_blank">@benvenutipizza_co</a>
@@ -239,27 +252,30 @@
       <a href="menu.html" class="btn">About Us</a>
     </div>
 
-    <div class="info-section">
-      <h3>📍 Location & Hours</h3>
-      <p>155 Highland Ave, Cheshire, CT</p>
-      <p>Monday: 11:00am – 8:00pm</p>
-      <p>Tuesday: 11:00am – 8:00pm</p>
-      <p>Wednesday: 11:00am – 8:00pm</p>
-      <p>Thursday: 11:00am – 8:00pm</p>
-      <p>Friday: 11:00am – 10:30pm</p>
-      <p>Saturday: 11:00am – 10:30pm</p>
-      <p>Sunday: 11:00am – 8:00pm</p>
-    </div>
+    <!-- Horário e formulário lado a lado -->
+    <div class="info-columns">
+      <div class="info-section">
+        <h3>📍 Location & Hours</h3>
+        <p>155 Highland Ave, Cheshire, CT</p>
+        <p>Monday: 11:00am – 8:00pm</p>
+        <p>Tuesday: 11:00am – 8:00pm</p>
+        <p>Wednesday: 11:00am – 8:00pm</p>
+        <p>Thursday: 11:00am – 8:00pm</p>
+        <p>Friday: 11:00am – 10:30pm</p>
+        <p>Saturday: 11:00am – 10:30pm</p>
+        <p>Sunday: 11:00am – 8:00pm</p>
+      </div>
 
-    <div class="info-section">
-      <h3>📄 Work With Us</h3>
-      <form action="https://formspree.io/f/manoopky" method="POST">
-        <input type="text" name="name" placeholder="Full Name" required />
-        <input type="email" name="email" placeholder="Email" required />
-        <input type="tel" name="phone" placeholder="Phone Number" required />
-        <textarea name="message" rows="5" placeholder="Tell us about yourself..." required></textarea>
-        <button type="submit">Send Application</button>
-      </form>
+      <div class="info-section">
+        <h3>📄 Work With Us</h3>
+        <form action="https://formspree.io/f/manoopky" method="POST">
+          <input type="text" name="name" placeholder="Full Name" required />
+          <input type="email" name="email" placeholder="Email" required />
+          <input type="tel" name="phone" placeholder="Phone Number" required />
+          <textarea name="message" rows="5" placeholder="Tell us about yourself..." required></textarea>
+          <button type="submit">Send Application</button>
+        </form>
+      </div>
     </div>
   </div>
 </body>
