@@ -19,24 +19,27 @@
       justify-content: center;
       align-items: flex-start;
       text-align: center;
-      padding: 40px;
+      padding: 90px 40px 40px; /* top padding ajustado por causa da barra fixa */
       flex-direction: column;
       min-height: 100vh;
     }
 
     .contact-bar {
       position: fixed;
-      top: 10px;
-      right: 20px;
+      top: 0;
+      left: 0;
+      width: 100%;
       background-color: #ffffff;
-      border: 1px solid #ccc;
-      padding: 10px 15px;
+      border-bottom: 1px solid #ccc;
+      padding: 8px 20px;
       font-size: 14px;
-      line-height: 1.4;
-      z-index: 999;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-      border-radius: 8px;
-      text-align: right;
+      color: #333;
+      z-index: 1000;
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      align-items: center;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
     }
 
     .contact-bar a {
@@ -158,7 +161,7 @@
 
     @media (max-width: 768px) {
       body {
-        padding: 20px;
+        padding: 90px 20px 20px; /* padding top ajustado para mobile */
         border-width: 15px;
       }
 
@@ -213,18 +216,16 @@
 </head>
 
 <body>
+  <!-- Contact bar no topo fixo -->
+  <div class="contact-bar">
+    📞 (203) 274-8886 &nbsp;&nbsp;|&nbsp;&nbsp;
+    📸 <a href="https://instagram.com/benvenutipizza_co" target="_blank">@benvenutipizza_co</a>
+  </div>
+
   <!-- Mini logo -->
   <img src="LOGO%20PNG.png" alt="Mini Logo" class="small-logo" />
 
-  <!-- Fixed contact info -->
-  <div class="contact-bar">
-    <p>
-      📞 (203) 274-8886<br />
-      📸 <a href="https://instagram.com/benvenutipizza_co" target="_blank">@benvenutipizza_co</a>
-    </p>
-  </div>
-
-  <!-- Main content -->
+  <!-- Conteúdo principal -->
   <div class="content">
     <img src="Benvenuti_fachada_ sem fundo.png" alt="Benvenuti Pizzeria Logo" class="logo" />
 
