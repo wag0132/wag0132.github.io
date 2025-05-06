@@ -19,35 +19,25 @@
       justify-content: center;
       align-items: flex-start;
       text-align: center;
-      padding: 90px 40px 40px;
+      padding: 40px;
       flex-direction: column;
       min-height: 100vh;
     }
 
-    .contact-bar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background-color: #ffffff;
-      border-bottom: 1px solid #ccc;
-      padding: 8px 20px;
+    .contact-info {
       font-size: 14px;
       color: #333;
-      z-index: 1000;
-      display: flex;
-      justify-content: flex-end;
-      gap: 10px;
-      align-items: center;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      text-align: right;
+      width: 100%;
+      padding: 5px 10px 0 10px;
     }
 
-    .contact-bar a {
+    .contact-info a {
       color: #d10000;
       text-decoration: none;
     }
 
-    .contact-bar a:hover {
+    .contact-info a:hover {
       text-decoration: underline;
     }
 
@@ -170,7 +160,7 @@
 
     @media (max-width: 768px) {
       body {
-        padding: 90px 20px 20px;
+        padding: 20px;
         border-width: 15px;
       }
 
@@ -229,14 +219,14 @@
 </head>
 
 <body>
-  <!-- Barra de contato fixa no topo -->
-  <div class="contact-bar">
+  <!-- Mini logo -->
+  <img src="LOGO%20PNG.png" alt="Mini Logo" class="small-logo" />
+
+  <!-- Informações de contato soltas -->
+  <div class="contact-info">
     📞 (203) 274-8886 &nbsp;&nbsp;|&nbsp;&nbsp;
     📸 <a href="https://instagram.com/benvenutipizza_co" target="_blank">@benvenutipizza_co</a>
   </div>
-
-  <!-- Mini logo -->
-  <img src="LOGO%20PNG.png" alt="Mini Logo" class="small-logo" />
 
   <!-- Conteúdo principal -->
   <div class="content">
@@ -252,7 +242,6 @@
       <a href="menu.html" class="btn">About Us</a>
     </div>
 
-    <!-- Horário e formulário lado a lado -->
     <div class="info-columns">
       <div class="info-section">
         <h3>📍 Location & Hours</h3>
