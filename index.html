@@ -5,59 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Benvenuti Pizzeria</title>
     <style>
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: Arial, sans-serif;
-      }
-
       body {
+        font-family: Arial, sans-serif;
         background-color: #ffffff;
-        border: 25px solid #d9d9d9;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        color: #000;
         text-align: center;
-        padding: 40px;
+        padding: 100px 20px;
+        overflow-x: hidden;
+        margin: 0;
+        position: relative;
       }
 
-      .content {
-        max-width: 800px;
-        width: 100%;
-        background-color: #fff;
-        padding: 20px;
+      .container {
+        border: 2px solid #e0e0e0;
+        padding: 60px 40px;
+        max-width: 1000px;
         margin: 0 auto;
+        box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.08);
+        border-radius: 12px;
+        background-color: #fff;
       }
 
       .small-logo {
         position: absolute;
         top: 20px;
-        left: 40px;
-        width: 60px;
+        left: 20px;
+        width: 80px;
         height: auto;
-        z-index: 2;
       }
 
       p {
-        font-size: 22px;
+        font-size: 20px;
         color: #333;
-        margin: 30px 0;
-        line-height: 1.5;
+        margin: 20px 0;
       }
 
       img.logo {
         width: 100%;
-        max-width: 600px;
-        max-height: 180px;
-        object-fit: contain;
-        margin: 0 auto 30px;
+        max-width: 1000px;
+        height: auto;
+        margin: 0 auto 20px;
         display: block;
       }
 
       .button-container {
-        margin-top: 30px;
+        margin-top: 40px;
         display: flex;
         justify-content: center;
         gap: 20px;
@@ -67,14 +59,13 @@
       .btn {
         background-color: #d10000;
         color: white;
-        padding: 14px 28px;
-        font-size: 18px;
+        padding: 15px 30px;
+        font-size: 20px;
         text-decoration: none;
         border-radius: 5px;
         transition: all 0.3s ease;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         border: none;
-        text-align: center;
       }
 
       .btn:hover {
@@ -87,41 +78,16 @@
         background-color: #8b0000;
       }
 
+      /* Responsividade */
       @media (max-width: 768px) {
         body {
-          padding: 20px;
-          border-width: 15px;
+          padding: 80px 15px;
         }
 
         .small-logo {
-          width: 45px;
+          width: 60px;
           top: 15px;
-          left: 20px;
-        }
-
-        img.logo {
-          max-height: 140px;
-        }
-
-        p {
-          font-size: 20px;
-        }
-
-        .btn {
-          font-size: 17px;
-          padding: 12px 24px;
-        }
-      }
-
-      @media (max-width: 480px) {
-        .small-logo {
-          width: 35px;
-          top: 10px;
           left: 15px;
-        }
-
-        img.logo {
-          max-height: 120px;
         }
 
         p {
@@ -129,8 +95,17 @@
         }
 
         .btn {
-          font-size: 16px;
-          padding: 12px 22px;
+          font-size: 18px;
+          padding: 12px 24px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .small-logo {
+          width: 50px;
+        }
+
+        .btn {
           width: 100%;
           max-width: 300px;
         }
@@ -144,14 +119,11 @@
   </head>
 
   <body>
-    <img src="LOGO%20PNG.png" alt="Mini Logo" class="small-logo" />
+    <img src="LOGO PNG.png" alt="Mini Logo" class="small-logo" />
 
-    <div class="content">
-      <img src="Benvenuti_fachada_%20sem%20fundo.png" alt="Benvenuti Pizzeria Logo" class="logo" />
-      <p>
-        We're almost ready to open our doors!<br />
-        Soon you'll be able to explore our menu and order your favorite pizza right here 🍕
-      </p>
+    <div class="container">
+      <img src="Benvenuti_fachada_ sem fundo.png" alt="Benvenuti Pizzeria Logo" class="logo" />
+      <p>We're almost ready to open our doors!<br> Soon you'll be able to explore our menu and order your favorite pizza right here 🍕</p>
       <div class="button-container">
         <a href="https://order.toasttab.com/online/benvenuti-pizza-co-155-highland-avenue" class="btn">Order Now</a>
         <a href="menu.html" class="btn">Explore</a>
@@ -159,4 +131,3 @@
     </div>
   </body>
 </html>
-
