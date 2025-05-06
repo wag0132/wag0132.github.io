@@ -24,6 +24,30 @@
       min-height: 100vh;
     }
 
+    .contact-bar {
+      position: fixed;
+      top: 10px;
+      right: 20px;
+      background-color: #ffffff;
+      border: 1px solid #ccc;
+      padding: 10px 15px;
+      font-size: 14px;
+      line-height: 1.4;
+      z-index: 999;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      text-align: right;
+    }
+
+    .contact-bar a {
+      color: #d10000;
+      text-decoration: none;
+    }
+
+    .contact-bar a:hover {
+      text-decoration: underline;
+    }
+
     .content {
       max-width: 800px;
       width: 100%;
@@ -189,54 +213,41 @@
 </head>
 
 <body>
+  <!-- Mini logo -->
   <img src="LOGO%20PNG.png" alt="Mini Logo" class="small-logo" />
 
+  <!-- Fixed contact info -->
+  <div class="contact-bar">
+    <p>
+      📞 (203) 274-8886<br />
+      📸 <a href="https://instagram.com/benvenutipizza_co" target="_blank">@benvenutipizza_co</a>
+    </p>
+  </div>
+
+  <!-- Main content -->
   <div class="content">
-  <img src="Benvenuti_fachada_ sem fundo.png" alt="Benvenuti Pizzeria Logo" class="logo" />
+    <img src="Benvenuti_fachada_sem_fundo.png" alt="Benvenuti Pizzeria Logo" class="logo" />
 
-  <p>
-    We're almost ready to open our doors!<br />
-    Soon you'll be able to explore our menu and order your favorite pizza right here 🍕
-  </p>
+    <p>
+      We're almost ready to open our doors!<br />
+      Soon you'll be able to explore our menu and order your favorite pizza right here 🍕
+    </p>
 
-  <!-- Contact section moved up -->
-  <div class="info-section">
-    <h3>📞 Contact</h3>
-    <p>Phone: (203) 274-8886</p>
-    <p>Instagram: <a href="https://instagram.com/benvenutipizza_co" target="_blank">@benvenutipizza_co</a></p>
-  </div>
+    <div class="button-container">
+      <a href="https://order.toasttab.com/online/benvenuti-pizza-co-155-highland-avenue" class="btn">Order Now</a>
+      <a href="menu.html" class="btn">About Us</a>
+    </div>
 
-  <div class="button-container">
-    <a href="https://order.toasttab.com/online/benvenuti-pizza-co-155-highland-avenue" class="btn">Order Now</a>
-    <a href="menu.html" class="btn">About Us</a>
-  </div>
-
-  <div class="info-section">
-    <h3>📍 Location & Hours</h3>
-    <p>155 Highland Ave, Cheshire, CT</p>
-    <p>Monday: 11:00am – 8:00pm</p>
-    <p>Tuesday: 11:00am – 8:00pm</p>
-    <p>Wednesday: 11:00am – 8:00pm</p>
-    <p>Thursday: 11:00am – 8:00pm</p>
-    <p>Friday: 11:00am – 10:30pm</p>
-    <p>Saturday: 11:00am – 10:30pm</p>
-    <p>Sunday: 11:00am – 8:00pm</p>
-  </div>
-
-  <div class="info-section">
-    <h3>📄 Work With Us</h3>
-    <form action="https://formspree.io/f/your-form-id" method="POST">
-      <input type="text" name="name" placeholder="Full Name" required />
-      <input type="email" name="email" placeholder="Email" required />
-      <input type="tel" name="phone" placeholder="Phone Number" required />
-      <textarea name="message" rows="5" placeholder="Tell us about yourself..." required></textarea>
-      <button type="submit">Send Application</button>
-    </form>
-  </div>
-</div>
-
-</div>
-
+    <div class="info-section">
+      <h3>📍 Location & Hours</h3>
+      <p>155 Highland Ave, Cheshire, CT</p>
+      <p>Monday: 11:00am – 8:00pm</p>
+      <p>Tuesday: 11:00am – 8:00pm</p>
+      <p>Wednesday: 11:00am – 8:00pm</p>
+      <p>Thursday: 11:00am – 8:00pm</p>
+      <p>Friday: 11:00am – 10:30pm</p>
+      <p>Saturday: 11:00am – 10:30pm</p>
+      <p>Sunday: 11:00am – 8:00pm</p>
     </div>
 
     <div class="info-section">
