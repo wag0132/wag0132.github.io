@@ -14,8 +14,8 @@
       }
 
       body {
-        background-color: #ffffff; /* fundo branco */
-        border: 25px solid #d9d9d9; /* borda ao redor da página */
+        background-color: #ffffff;
+        border: 25px solid #d9d9d9;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -24,38 +24,40 @@
       }
 
       .content {
-        max-width: 1000px;
+        max-width: 800px;
         width: 100%;
         background-color: #fff;
         padding: 20px;
+        margin: 0 auto;
       }
 
       .small-logo {
         position: absolute;
         top: 20px;
-        left: 40px; /* movida mais pra direita */
-        width: 80px;
+        left: 40px;
+        width: 60px;
         height: auto;
         z-index: 2;
       }
 
       p {
-        font-size: 20px;
+        font-size: 22px;
         color: #333;
-        margin: 20px 0;
+        margin: 30px 0;
+        line-height: 1.5;
       }
 
       img.logo {
         width: 100%;
-        max-width: 1000px;
-        max-height: 250px; /* limita altura da logo */
-        object-fit: contain; /* evita distorção */
-        margin: 0 auto 20px;
+        max-width: 600px;
+        max-height: 180px;
+        object-fit: contain;
+        margin: 0 auto 30px;
         display: block;
       }
 
       .button-container {
-        margin-top: 40px;
+        margin-top: 30px;
         display: flex;
         justify-content: center;
         gap: 20px;
@@ -65,13 +67,14 @@
       .btn {
         background-color: #d10000;
         color: white;
-        padding: 15px 30px;
-        font-size: 20px;
+        padding: 14px 28px;
+        font-size: 18px;
         text-decoration: none;
         border-radius: 5px;
         transition: all 0.3s ease;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         border: none;
+        text-align: center;
       }
 
       .btn:hover {
@@ -91,9 +94,13 @@
         }
 
         .small-logo {
-          width: 50px;
+          width: 45px;
           top: 15px;
-          left: 25px;
+          left: 20px;
+        }
+
+        img.logo {
+          max-height: 140px;
         }
 
         p {
@@ -101,23 +108,29 @@
         }
 
         .btn {
-          font-size: 18px;
+          font-size: 17px;
           padding: 12px 24px;
         }
       }
 
       @media (max-width: 480px) {
         .small-logo {
-          width: 40px;
+          width: 35px;
           top: 10px;
-          left: 20px;
+          left: 15px;
+        }
+
+        img.logo {
+          max-height: 120px;
         }
 
         p {
-          font-size: 22px;
+          font-size: 18px;
         }
 
         .btn {
+          font-size: 16px;
+          padding: 12px 22px;
           width: 100%;
           max-width: 300px;
         }
@@ -135,7 +148,10 @@
 
     <div class="content">
       <img src="Benvenuti_fachada_%20sem%20fundo.png" alt="Benvenuti Pizzeria Logo" class="logo" />
-      <p>We're almost ready to open our doors!<br> Soon you'll be able to explore our menu and order your favorite pizza right here 🍕</p>
+      <p>
+        We're almost ready to open our doors!<br />
+        Soon you'll be able to explore our menu and order your favorite pizza right here 🍕
+      </p>
       <div class="button-container">
         <a href="https://order.toasttab.com/online/benvenuti-pizza-co-155-highland-avenue" class="btn">Order Now</a>
         <a href="menu.html" class="btn">Explore</a>
@@ -143,3 +159,4 @@
     </div>
   </body>
 </html>
+
