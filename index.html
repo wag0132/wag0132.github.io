@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Benvenuti Pizzeria</title>
   <style>
     html, body {
@@ -10,18 +10,18 @@
       padding: 0;
       box-sizing: border-box;
       font-family: Arial, sans-serif;
-      overflow-x: hidden; /* Evita rolagem horizontal */
+      overflow-x: hidden;
     }
 
     body {
       background-color: #ffffff;
       border: 25px solid #d9d9d9;
       display: flex;
-      justify-content: center;
-      align-items: flex-start;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
       text-align: center;
       padding: 40px;
-      flex-direction: column;
       min-height: 100vh;
     }
 
@@ -42,14 +42,6 @@
       text-decoration: underline;
     }
 
-    .content {
-      max-width: 800px;
-      width: 100%;
-      background-color: #fff;
-      padding: 20px;
-      margin: 0 auto;
-    }
-
     .small-logo {
       position: absolute;
       top: 20px;
@@ -59,11 +51,12 @@
       z-index: 2;
     }
 
-    p {
-      font-size: 22px;
-      color: #333;
-      margin: 30px 0;
-      line-height: 1.5;
+    .content {
+      max-width: 800px;
+      width: 100%;
+      background-color: #fff;
+      padding: 20px;
+      margin: 0 auto;
     }
 
     img.logo {
@@ -73,6 +66,13 @@
       object-fit: contain;
       margin: 0 auto 30px;
       display: block;
+    }
+
+    p {
+      font-size: 22px;
+      color: #333;
+      margin: 30px 0;
+      line-height: 1.5;
     }
 
     .button-container {
@@ -109,8 +109,9 @@
     .info-columns {
       display: flex;
       gap: 40px;
-      margin-top: 50px;
+      margin-top: 80px;
       flex-wrap: wrap;
+      justify-content: center;
     }
 
     .info-columns .info-section {
@@ -223,7 +224,6 @@
     }
   </style>
 </head>
-
 <body>
   <!-- Mini logo -->
   <img src="LOGO%20PNG.png" alt="Mini Logo" class="small-logo" />
@@ -238,37 +238,39 @@
   <div class="content">
     <img src="Benvenuti_fachada_ sem fundo.png" alt="Benvenuti Pizzeria Logo" class="logo" />
 
-  
+    <p>
+      We're almost ready to open our doors!<br />
+      Soon you'll be able to explore our menu and order your favorite pizza right here 🍕
     </p>
 
     <div class="button-container">
       <a href="https://order.toasttab.com/online/benvenuti-pizza-co-155-highland-avenue" class="btn">Order Now</a>
       <a href="about.html" class="btn">🍕 Meet the Family</a>
     </div>
+  </div>
 
-    <div class="info-columns">
-      <div class="info-section">
-        <h3>📍 Location & Hours</h3>
-        <p>155 Highland Ave, Cheshire, CT</p>
-        <p>Monday: 11:00am – 8:00pm</p>
-        <p>Tuesday: 11:00am – 8:00pm</p>
-        <p>Wednesday: 11:00am – 8:00pm</p>
-        <p>Thursday: 11:00am – 8:00pm</p>
-        <p>Friday: 11:00am – 10:30pm</p>
-        <p>Saturday: 11:00am – 10:30pm</p>
-        <p>Sunday: 11:00am – 8:00pm</p>
-      </div>
+  <div class="info-columns">
+    <div class="info-section">
+      <h3>📍 Location & Hours</h3>
+      <p>155 Highland Ave, Cheshire, CT</p>
+      <p>Monday: 11:00am – 8:00pm</p>
+      <p>Tuesday: 11:00am – 8:00pm</p>
+      <p>Wednesday: 11:00am – 8:00pm</p>
+      <p>Thursday: 11:00am – 8:00pm</p>
+      <p>Friday: 11:00am – 10:30pm</p>
+      <p>Saturday: 11:00am – 10:30pm</p>
+      <p>Sunday: 11:00am – 8:00pm</p>
+    </div>
 
-      <div class="info-section">
-        <h3>📄 Work With Us</h3>
-        <form action="https://formspree.io/f/manoopky" method="POST">
-          <input type="text" name="name" placeholder="Full Name" required />
-          <input type="email" name="email" placeholder="Email" required />
-          <input type="tel" name="phone" placeholder="Phone Number" required />
-          <textarea name="message" rows="5" placeholder="Tell us about yourself..." required></textarea>
-          <button type="submit">Send Application</button>
-        </form>
-      </div>
+    <div class="info-section">
+      <h3>📄 Work With Us</h3>
+      <form action="https://formspree.io/f/manoopky" method="POST">
+        <input type="text" name="name" placeholder="Full Name" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <input type="tel" name="phone" placeholder="Phone Number" required />
+        <textarea name="message" rows="5" placeholder="Tell us about yourself..." required></textarea>
+        <button type="submit">Send Application</button>
+      </form>
     </div>
   </div>
 </body>
