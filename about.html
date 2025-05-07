@@ -8,14 +8,10 @@
     body {
       margin: 0;
       font-family: 'Georgia', serif;
-      background-color: #fff8f0;
+      background-color: #ffffff;
       color: #333;
       padding: 20px;
       line-height: 1.6;
-      background-image: url('italian-pattern.png');
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
     }
 
     h2 {
@@ -27,13 +23,15 @@
     }
 
     .about-block {
-      max-width: 900px;
+      max-width: 1000px;
       margin: 0 auto 60px;
       background-color: rgba(255, 255, 255, 0.95);
       padding: 20px;
       border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      text-align: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     .about-block p {
@@ -63,6 +61,27 @@
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
     }
 
+    .split-section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      align-items: center;
+      justify-content: center;
+      margin-top: 50px;
+    }
+
+    .split-section .image-side {
+      flex: 1 1 300px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .split-section .text-side {
+      flex: 1 1 300px;
+      text-align: left;
+    }
+
     .back-home {
       text-align: center;
       margin-top: 60px;
@@ -82,31 +101,23 @@
       background-color: #800000;
     }
 
-    .olive-decor {
-      width: 100%;
-      max-width: 300px;
-      margin: 0 auto 20px;
-      display: block;
-    }
-
-    @media (max-width: 600px) {
-      h2 {
-        font-size: 26px;
+    @media (max-width: 768px) {
+      .split-section {
+        flex-direction: column;
       }
 
-      .about-block p {
-        font-size: 16px;
+      .split-section .image-side,
+      .split-section .text-side {
+        width: 100%;
       }
     }
   </style>
 </head>
 <body>
-  <img src="olives.jpg" alt="olives.jpg" class="olives.jpg" />
-
   <h2>Our Story</h2>
 
   <div class="about-block">
-    <img src="Foto de Wagner Fragassi" alt="Foto de Wagner Fragassi" class="about-photo" />
+    <img src="foto_melhorada.jpg" alt="Wagner's Nonna" class="about-photo" />
     <p>
       Everything started with a very special woman — my Nonna. Her love for the kitchen was more than just preparing food; it was how she expressed love, care, and joy. Every dish she made carried tradition, warmth, and family. She is the root of everything we do at Benvenuti Pizzeria.
     </p>
@@ -114,27 +125,29 @@
 
   <div class="about-block">
     <div class="photo-gallery">
-      <img src="mother.jpg1.jpg" alt="mother.jpg1.jpg" />
-      <img src="foto_melhorada.jpg" alt="foto_melhorada.jpg" />
+      <img src="mother1.jpg" alt="Wagner and his Mother 1" />
+      <img src="mother2.jpg" alt="Wagner and his Mother 2" />
     </div>
     <p>
       The passion Nonna passed down didn’t stop there. My mother became the second most important person in my culinary journey. She taught me not only how to cook but how to care — how food brings people together. She made our kitchen a place of learning, love, and unforgettable flavors.
     </p>
   </div>
 
-  <div class="about-block">
-    <div class="photo-gallery">
-      <img src="savoy 1 .jpg" alt="savoy 1 .jpg" />
-      <img src="savoy.jpg" alt="savoy.jpg" />
-      <img src="Square Peg 4-16-24-4.PNG" alt="Square Peg 4-16-24-4.PNG" />
-      <img src="Square Peg 4-16-24-9.jpg" alt="Square Peg 4-16-24-9.jpg" />
+  <div class="about-block split-section">
+    <div class="image-side">
+      <img src="savoy1.jpg" alt="Wagner at Savoy Pizzeria 1" />
+      <img src="savoy.jpg" alt="Wagner at Savoy Pizzeria 2" />
+      <img src="squarepeg1.png" alt="Wagner at Square Peg 1" />
+      <img src="squarepeg2.jpg" alt="Wagner at Square Peg 2" />
     </div>
-    <p>
-      I started working with pizza when I was just 14. Over the years, I’ve had the privilege of working in amazing kitchens — from Savoy in West Hartford to Square Peg and beyond. Each place helped shape my vision, refine my skills, and inspire the dream of opening my own pizzeria.
-    </p>
-    <p>
-      Today, Benvenuti Pizzeria is the result of those memories, those lessons, and that family passion — passed from Nonna’s hands to mine.
-    </p>
+    <div class="text-side">
+      <p>
+        I started working with pizza when I was just 14. Over the years, I’ve had the privilege of working in amazing kitchens — from Savoy in West Hartford to Square Peg and beyond. Each place helped shape my vision, refine my skills, and inspire the dream of opening my own pizzeria.
+      </p>
+      <p>
+        Today, Benvenuti Pizzeria is the result of those memories, those lessons, and that family passion — passed from Nonna’s hands to mine.
+      </p>
+    </div>
   </div>
 
   <div class="back-home">
