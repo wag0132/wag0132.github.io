@@ -205,13 +205,13 @@
   <img src="pizza6.png" class="fade-slide" style="opacity: 0;">
   <img src="pizza7.png" class="fade-slide" style="opacity: 0;">
   <img src="pizza8.png" class="fade-slide" style="opacity: 0;">
-  <img src="pizza$1.png" class="fade-slide" style="opacity: 0;">
-  <img src="pizza10.png" class="fade-slide" style="display: none;">
-  <img src="pizza11.png" class="fade-slide" style="display: none;">
-  <img src="pizza12.png" class="fade-slide" style="display: none;">
-  <img src="pizza13.png" class="fade-slide" style="display: none;">
-  <img src="pizza14.png" class="fade-slide" style="display: none;">
-  <img src="pizza15.png" class="fade-slide" style="display: none;">
+  <img src="pizza9.png" class="fade-slide" style="opacity: 0;">
+  <img src="pizza10.png" class="fade-slide" style="opacity: 0;">
+  <img src="pizza11.png" class="fade-slide" style="opacity: 0;">
+  <img src="pizza12.png" class="fade-slide" style="opacity: 0;">
+  <img src="pizza13.png" class="fade-slide" style="opacity: 0;">
+  <img src="pizza14.png" class="fade-slide" style="opacity: 0;">
+  <img src="pizza15.png" class="fade-slide" style="opacity: 0;">
   <button class="slider-btn prev" onclick="changeSlide(-1)">&#10094;</button>
   <button class="slider-btn next" onclick="changeSlide(1)">&#10095;</button>
 </div>
@@ -271,11 +271,11 @@ function updateIndicators() {
 }
 
 setInterval(() => {
-  const total = slides.length;
-  const index = Math.floor((performance.now() / 3000) % total);
-  current = index;
+  fadeSlides[current].style.opacity = '0';
+  current = (current + 1) % fadeSlides.length;
+  fadeSlides[current].style.opacity = '1';
   updateIndicators();
-}, 500);
+}, 3000);
 let fadeSlides = document.querySelectorAll('.fade-slide');
 function changeSlide(direction) {
   fadeSlides[current].style.opacity = '0';
