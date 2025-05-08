@@ -255,9 +255,11 @@ function updateIndicators() {
 }
 
 setInterval(() => {
-  current = (current + 1) % slides.length;
+  const total = slides.length;
+  const index = Math.floor((performance.now() / 3000) % total);
+  current = index;
   updateIndicators();
-}, 3000);
+}, 500);
 </script>
 </body>
 </html>
